@@ -16,7 +16,23 @@ $page = "Home";
     
     <body>
         <?PHP require_once ('Templates/header_template.php'); ?>
-        <div id="slide_Section"></div>
+        
+        <div id="slide_Section" class="slide_Section">
+            <div id="qro_slider" class="qro_slider">
+                <ul id="slides" class="slides">
+                    <li>
+                        <img src="../Slides/"<?PHP echo $page; ?>"slide1.png"/>
+                        <p>Welcome to <span class="brain_Freese_Span">Brain Freeze Studios</span></p>
+                    </li>
+                    
+                    <li>
+                        <img src="../Slides/"<?PHP echo $page; ?>"slide2.png"/>
+                        <p> We believe that online entertaiment should be free, and that's what we will deliver to you. </p>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
         <div id="main Content"></div>
         <footer>
         </footer>

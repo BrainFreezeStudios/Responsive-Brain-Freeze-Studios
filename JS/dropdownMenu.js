@@ -1,3 +1,12 @@
+/* ------------
+
+JS code for the dropdown menu at Brain Freeze Studios,
+used for screens 790px and under.
+Created by : Andres Mrad (Q-ro).
+Creation date: June 25 2013.
+
+-------------- */
+
 $(document).ready(function () {
 
     //Hide submenu on page load.    
@@ -20,7 +29,7 @@ $(document).ready(function () {
         return false
     });
 
-    //Mouse click on my dorpdown_Menu_Icon link
+    //Mouse click on my dorpdown_Menu_Icon
     $(".dorpdown_Menu_Icon").mouseup(function () {
         return false
     });
