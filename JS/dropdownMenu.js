@@ -29,7 +29,7 @@ $(document).ready(function () {
         return false
     });
 
-    //Mouse click on my dorpdown_Menu_Icon
+    //Mouse click on dorpdown_Menu_Icon
     $(".dorpdown_Menu_Icon").mouseup(function () {
         return false
     });
