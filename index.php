@@ -5,6 +5,7 @@
     <head>
         <meta charset="utf-8">
         <title>Brain Freeze Studios - <?PHP echo($page); ?> -</title>
+        <script src="http://use.edgefonts.net/anonymous-pro:n4,i4,n7,i7:all;quicksand:i4,n3,i7,n7,n4,i3:all.js"></script>
         <script type="text/javascript" src="../JS/jquery-2.0.2.min.js"></script>
         <link type="text/css" href="CSS/Reset.css"/>
         <link rel="stylesheet" href="CSS/Style.css" />
@@ -37,7 +38,19 @@
                 </div>
             </div>
         </div>
-        <div id="main Content"></div>
+        <div id="main_Content_Container" class="main_Content_Container clearfix">
+            <div id="main_Content_Wrapper" class="main_Content_Wrapper">
+            <section id="main_Content" class="main_Content information_Container span_6_of_8">
+                <h1>
+                    Welcome to Brain Freeze Studios
+                </h1>
+                <hr/>
+                dsaddasdas
+            </section>
+            <aside id="side_Bar" class="side_Bar information_Container span_2_of_8">
+            </aside>
+                </div>
+        </div>
         <footer></footer>
     </body>
 
