@@ -128,6 +128,7 @@ menu{
         /*
     width:90%;
     max-width:85px;*/
+        
     }
     dorpdown_Menu_Icon {
         max-width:45px;        
@@ -141,6 +142,11 @@ menu{
     
     }
     
+    .dropdown_Menu li a:hover
+    {
+        color:#fff;
+    }
+    
     .dropdown_Menu ul
     {
         background-color:white;
@@ -152,6 +158,8 @@ menu{
         -moz-box-shadow:    -5px 9px 30px 1px #555;
   -webkit-box-shadow: -5px 9px 30px 1px #555;
   box-shadow:         -5px 9px 30px 1px #555;
+        
+        
     }
     
     .dropdown_Menu li a {
@@ -253,12 +261,73 @@ menu{
 
 .main_Content h1
 {
-    font-size: 1.7em;
+    font-size: 2em;
+    font-weight:normal;
 }
 
+.main_Content h3
+{
+    font-size:1.5em;
+    font-weight:normal;
+}
+
+.home_Information_Containers
+{
+    width:90%;
+    margin-top:25px;
+    padding:auto;
+    margin:auto;
+}
+
+.header
+{
+    color:white;
+    padding-top:1px;
+    padding-bottom:1px;
+    margin-top: 15px;
+}
+
+.blogpost_Header
+{
+    background-color:#8A3891;
+}
+
+.lastes_Blog_List
+{
+    text-decoration:none;
+    list-style-type: none;
+    text-align:justify;
+    margin:0;
+    padding:0;
+}
+
+.lastes_Blog_List span
+{
+    margin-left:5px;
+}
+.lastes_Blog_List .date
+{
+    font-size:2em;
+    color:#333;
+    font-weight:normal;
+}
+.lastes_Blog_List .blog_List_Title
+{
+    font-size:1.5em;
+    font-weight:bold;
+}
+.lastes_Blog_List .author
+{
+    font-size:0.9em;
+    font-weight:lighter;
+    
+}
 .main_Content hr
 {
-    margin: 1% 2%;
+    width:90%;
+    padding:auto;
+    margin: auto;
+    margin-bottom:15px;
 }
 
 .side_Bar
@@ -337,4 +406,35 @@ menu{
     .span_1_of_8 {
         width: 100%;
     }
+}
+
+
+/*  GRID OF THREE   ============================================================================= */
+
+	
+.span_3_of_3 {
+	width: 100%; 
+}
+
+.span_2_of_3 {
+	width: 66.1%; 
+}
+
+.span_1_of_3 {
+	width: 32.2%; 
+}
+
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+	.span_3_of_3 {
+		width: 100%; 
+	}
+	.span_2_of_3 {
+		width: 100%; 
+	}
+	.span_1_of_3 {
+		width: 100%;
+	}
 }
