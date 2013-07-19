@@ -9,8 +9,8 @@
             <a class="menu_Root">
                 <img src="Images/dropDown_Menu.png" class="dorpdown_Menu_Icon" />
             </a>
-            <div class="submenu">
-                <ul class="root">
+            <div class="submenu clearfix">
+                <ul class="root clearfix">
                     <li>
                         <a href="../index.php" class="menu_Home">Home</a>
                     </li>
