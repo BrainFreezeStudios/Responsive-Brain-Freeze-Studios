@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<?PHP $page="Home" ; ?>
+<?PHP require_once ( 'PHP/DB_Conect.php'); require_once ( 'PHP/home_Functions/Blog_Functions.php'); $page="Home" ;?>
+
 <html lang="en">
     
     <head>
@@ -13,8 +14,9 @@
         <link rel="stylesheet" href="CSS/QroSliderStyle.css" />
         <script type="text/javascript" src="JS/dropdownMenu.js"></script>
         <script type="text/javascript" src="JS/QroSlider.js"></script>
+        <script type="text/javascript" src="JS/Twitter.js"></script>
         <script type="text/javascript">
-            $(function() {
+            $(document).ready(function() {
                 $('#QroSlider').QroSlider({
                     slide_Duration: 4000,
                     fade_Duration: 800,
@@ -45,29 +47,55 @@
                     <hr/>
                     <div id="home_latest_Blogs" class="latest_Blogs home_Information_Containers">
                         <div class="header blogpost_Header">
-                        <h3>Read our latest blogpost</h3>
+                            <h3>Read our latest blogpost</h3>
                         </div>
-                        <div>
-                            <ul class="lastes_Blog_List">
+                        <div class="latest_Container">
+                        
+                            <ul class="latest_List">
+                            <?PHP 
+                                $latest_Blogs = getLatestBlogpost(4,$PDO);
+                                if($latest_Blogs == false)
+                                {
+                            ?>       
+                                <li> <?PHP echo "AAAAAARRRGGG D: , There are no blog post to be displayed ... yet."; ?> </li>
+                            
+                            <?PHP
+                                } 
+                                else
+                                {
+                            ?>
                                 <li>
-                                    <span class="date span_1_of_3">
-                                        qsdsad
-                                    </span>
-                                    <span class="blog_List_Title span_1_of_3">
-                                        my carrito loco.
-                                    </span>
-                                    <span class="author span_1_of_3">
-                                        por andres
-                                    </span>
+                                    <span class="date span_1_of_3">qsdsad</span>
+                                    <span class="blog_List_Title span_1_of_3">my carrito loco.</span>
+                                    <span class="author span_1_of_3">por andres</span>
                                 </li>
-                             
-                                
-                                
+                            <?PHP 
+                                }
+                            ?>
                             </ul>
                         </div>
                     </div>
+                    
+                    <div id="home_latest_Videos" class="latest_Videos home_Information_Containers">
+                        <div class="header videos_Header">
+                            <h3>Watch our latest videos</h3>
+                        </div>
+                        <div class="latest_Container">
+                            <ul class="latest_List">
+                            </ul>
+                        </div>
+                    </div>
+                    
                 </section>
-                <aside id="side_Bar" class="side_Bar information_Container span_2_of_8"></aside>
+                <aside id="side_Bar" class="side_Bar span_2_of_8">
+                    
+                    <div class="header twitter_Header">
+                        <h3>Latest Tweets</h3>
+                    </div>
+                    <div id="twitter_Feed" class="twitter">
+                    </div>
+                    
+                </aside>
             </div>
         </div>
         <footer></footer>

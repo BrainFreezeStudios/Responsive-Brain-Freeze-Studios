@@ -292,11 +292,16 @@ menu{
     background-color:#8A3891;
 }
 
-.lastes_Blog_List
+.videos_Header
+{
+    background-color:#cc8a26;
+}
+
+.latest_List
 {
     text-decoration:none;
     list-style-type: none;
-    text-align:justify;
+    text-align:center;
     margin:0;
     padding:0;
 }
@@ -322,6 +327,21 @@ menu{
     font-weight:lighter;
     
 }
+
+.latest_Container
+{
+    padding:10px 0 10px 0;
+    border: 2px groove;
+}
+
+.twitter_Header
+{
+    background-color:#496fad;
+    margin-top:0;
+    font-weight:lighter;
+    font-size:0.9em;
+}
+
 .main_Content hr
 {
     width:90%;
@@ -332,9 +352,163 @@ menu{
 
 .side_Bar
 {
+    padding-top:0;
+    margin-top: 0;
     float:right;
 }
 
+/*
+*   Twitter section
+*/
+
+#loading_Container {
+    padding:16px 0px 16px 0px;
+    text-align:center;  
+}
+ 
+#twitter_Feed {
+    width:100%;
+    font-family: Arial, Helvetica, sans-serif;
+    padding:8px 0px 5px 0px;
+    background-color:#FFF;
+    color:#333;
+    overflow:auto;
+}
+ 
+#twitter_Feed h1 {
+    color:#5F5F5F;
+    margin:0px;
+    padding:9px auto 9px auto;
+    margin:auto;
+    font-size:18px;
+    font-weight:lighter;    
+}
+ 
+.twitter_Article, #loading_Container {
+    border-top:1px dotted #CCC;
+    width:100%;
+}
+
+.twitter_Headline
+{
+    padding: 10px;
+}
+
+.twitter_Pic {
+    float:left;
+    height:auto;
+    width:20%;
+    max-width:45px;
+    max-height:45px;
+}
+ 
+.twitter_Pic img {
+    float:left;
+    border-radius:7px;  
+    border:none;
+    width: 100%;
+    height:100%;
+     
+}
+.twitter_Author
+{
+    text-align:right;
+    font-size:0.6em;
+}
+
+.twitter_Author a
+{
+    text-decoration:none;
+}
+ 
+/* -------- TEXT STYLING ------*/
+.twitter_Text {
+    width:100%;
+    float:left;
+    font-size:11px;
+    padding: 15px 0 5px 0;
+}
+.twitter_Text p {
+    margin:0px;
+    text-align:left;
+    margin-bottom:5px;
+    padding-left:10px;
+    padding-right:10px;
+}
+.twitter_Text a,  h1 a {
+    color: #00acee;
+    text-decoration: none;
+}
+.twitter_Text a:hover,  h1 a:hover {
+    text-decoration: underline;
+    color: #00acee;
+}
+ 
+.tweet_Time {
+    font-size:10px;
+    color:#878787;
+    float:right;
+}
+.tweet_Time a, .tweet_Time a:hover {
+    color:#878787;
+}
+ 
+.tweetprofilelink a {
+    color:#444;
+    font-size:0.8em;
+    padding:0;
+    margin:0;
+}
+.tweetprofilelink a:hover {
+    color:#444;
+}
+ 
+/* -------- FEED  ACTIONS ------*/
+#twitter_Actions {
+    float:right;
+    margin-right:1px;   
+    margin-top:0px;
+    display:none;
+}
+.intent {
+    width:25px;
+    height:16px;
+    float:left; 
+}
+.intent a{
+    width:25px;
+    height:16px;
+    display:block;
+    background-image:url(../Images/Side_Bar/tweet-actions.png);
+    float:left; 
+} 
+.intent a:hover{
+    background-position:-25px 0px;
+} 
+ 
+#intent_Retweet a{
+    background-position:0px -17px;
+} 
+#intent_Retweet a:hover{
+    background-position:-25px -17px;
+} 
+#intent_Fave a{
+    background-position:0px -36px;
+} 
+#intent_Fave a:hover{
+    background-position:-25px -36px;
+} 
+ 
+/* -------- RETWEET INDICATOR ------*/
+#retweet_indicator {
+    width:14px;
+    height:10px;
+    background-image:url(../Images/Side_Bar/tweet-actions.png);
+    background-position:-5px -54px;
+    margin-top:3px;
+    margin-left:10px;
+    float:left;
+}
 
 /*
 *   Clearfix

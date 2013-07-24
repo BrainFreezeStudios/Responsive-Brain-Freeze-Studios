@@ -36,3 +36,11 @@
 Icon?
 ehthumbs.db
 Thumbs.db
+
+# DB Connection File #
+######################
+DB_Conect.php
+
+# Twitter AUTH Files #
+######################
+twitter.php
