@@ -13,7 +13,8 @@ Creation date: June 20 2013.
     background-color:#434343;
     padding-top: 15px;
     width: 100%;
-    overflow:hidden; /*this should on preventing a minor bug when changing the breowser window size*/
+    overflow:hidden;
+    /*this should on preventing a minor bug when changing the breowser window size*/
 }
 .header_Container {
     width:95%;
@@ -25,7 +26,7 @@ body {
     padding:0;
     text-align:center;
     width:100%;
-    font-family: 'Benton Sans', lekton, helvetica, arial, sans-serif;
+    font-family:'Benton Sans', lekton, helvetica, arial, sans-serif;
 }
 /*
 *   Header items
@@ -50,21 +51,21 @@ body {
     z-index:0;
 }
 .horizontal_Menu_Container {
- float:right;
+    float:right;
     padding:0;
     margin:0;
     z-index:3;
 }
-.horizontal_Menu{
- list-style-type: none;
+.horizontal_Menu {
+    list-style-type: none;
     color: #fff;
     background-color:#545454;
     margin-bottom:0;
 }
-.horizontal_Menu li{
+.horizontal_Menu li {
     float:left;
 }
-.horizontal_Menu li a{
+.horizontal_Menu li a {
     color:#fff;
     text-decoration:none;
     padding-left: 10px;
@@ -75,33 +76,29 @@ body {
     line-height: 60px;
     display:block;
 }
-
-menu{
+menu {
     margin:0;
     padding:0;
 }
-
-.menu_Home:hover{
+.menu_Home:hover {
     background:#34b8e7;
 }
-.menu_Blog:hover{
+.menu_Blog:hover {
     background:#8a3891;
 }
-.menu_Videos:hover
-{
+.menu_Videos:hover {
     background:#cc8a26;
 }
-.menu_Gallery:hover{
+.menu_Gallery:hover {
     background:#ab242b;
 }
-.menu_Code:hover{
+.menu_Code:hover {
     background:#26ab5b;
 }
-.menu_Steam:hover
-{
+.menu_Steam:hover {
     background:#3b3938;
 }
-.menu_About:hover{
+.menu_About:hover {
     background:#9f9cff
 }
 /*
@@ -110,7 +107,7 @@ menu{
  @media only screen and (max-width: 850px) {
     .horizontal_Menu_Container {
         display:none;
-        visibility:hidden;    
+        visibility:hidden;
         width:0;
         height:0;
         z-index:0;
@@ -123,45 +120,32 @@ menu{
         padding-bottom:1%;
         width:auto;
         height:auto;
-        
         z-index:5;
         /*
     width:90%;
     max-width:85px;*/
-        
     }
     dorpdown_Menu_Icon {
-        max-width:45px;        
+        max-width:45px;
     }
-    
-    .dropdown_Menu li
-    {        
+    .dropdown_Menu li {
         z-index:6;
         width:200px;
         text-align:center;
-    
     }
-    
-    .dropdown_Menu li a:hover
-    {
+    .dropdown_Menu li a:hover {
         color:#fff;
     }
-    
-    .dropdown_Menu ul
-    {
+    .dropdown_Menu ul {
         background-color:white;
-        position:absolute;        
+        position:absolute;
         margin-left:-140px;
         width:auto;
         z-index:6;
-        
-        -moz-box-shadow:    -5px 9px 30px 1px #555;
-  -webkit-box-shadow: -5px 9px 30px 1px #555;
-  box-shadow:         -5px 9px 30px 1px #555;
-        
-        
+        -moz-box-shadow: -5px 9px 30px 1px #555;
+        -webkit-box-shadow: -5px 9px 30px 1px #555;
+        box-shadow: -5px 9px 30px 1px #555;
     }
-    
     .dropdown_Menu li a {
         color: #000;
         display: block;
@@ -173,7 +157,6 @@ menu{
         cursor: pointer;
         text-decoration:none;
         width:auto;
-        
     }
     .root {
         list-style:none;
@@ -190,27 +173,20 @@ menu{
         margin:0;
         width: 100%;
         vertical-align: middle;
-        
-        
-        
     }
     .menu_Root {
         float:right;
     }
 }
-
 /*
 *   Slide Section
 */
-.slide_Section
-{
+ .slide_Section {
     width:100%;
     padding-top:30px;
     padding-bottom: 30px;
 }
-#Home_Slide_Section
-{
-    
+#Home_Slide_Section {
     background-color: #34b8e7;
     /*
     background-image: linear-gradient(bottom, #2D77A8 21%, #35A6FC 70%);
@@ -228,144 +204,104 @@ menu{
         );
     */
 }
-
 /*
 *   Main content section
 */
-.main_Content_Container
-{
+ .main_Content_Container {
     background-color:#bebebe;
     padding:25px 0 25px 0;
     width:100%;
 }
-
-.main_Content_Wrapper
-{
+.main_Content_Wrapper {
     width:95%;
     margin-left:auto;
     margin-right:auto;
 }
-
-.information_Container
-{
+.information_Container {
     background-color:white;
     padding-top:35px;
     padding-bottom: 30px;
 }
-
-.main_Content
-{
+.main_Content {
     float:left;
-    
 }
-
-.main_Content h1
-{
+.main_Content h1 {
     font-size: 2em;
     font-weight:normal;
 }
-
-.main_Content h3
-{
+.main_Content h3 {
     font-size:1.5em;
     font-weight:normal;
 }
-
-.home_Information_Containers
-{
+.home_Information_Containers {
     width:90%;
     margin-top:25px;
     padding:auto;
     margin:auto;
 }
-
-.header
-{
+.header {
     color:white;
     padding-top:1px;
     padding-bottom:1px;
     margin-top: 15px;
 }
-
-.blogpost_Header
-{
+.blogpost_Header {
     background-color:#8A3891;
 }
-
-.videos_Header
-{
+.videos_Header {
     background-color:#cc8a26;
 }
-
-.latest_List
-{
+.latest_List {
     text-decoration:none;
     list-style-type: none;
     text-align:center;
     margin:0;
     padding:0;
 }
-
-.lastes_Blog_List span
-{
+.lastes_Blog_List span {
     margin-left:5px;
 }
-.lastes_Blog_List .date
-{
+.lastes_Blog_List .date {
     font-size:2em;
     color:#333;
     font-weight:normal;
 }
-.lastes_Blog_List .blog_List_Title
-{
+.lastes_Blog_List .blog_List_Title {
     font-size:1.5em;
     font-weight:bold;
 }
-.lastes_Blog_List .author
-{
+.lastes_Blog_List .author {
     font-size:0.9em;
     font-weight:lighter;
-    
 }
-
-.latest_Container
-{
+.latest_Container {
     padding:10px 0 10px 0;
     border: 2px groove;
 }
-
-.twitter_Header
-{
+.twitter_Header {
     background-color:#496fad;
     margin-top:0;
     font-weight:lighter;
     font-size:0.9em;
 }
-
-.main_Content hr
-{
+.main_Content hr {
     width:90%;
     padding:auto;
     margin: auto;
     margin-bottom:15px;
 }
-
-.side_Bar
-{
+.side_Bar {
     padding-top:0;
     margin-top: 0;
     float:right;
 }
-
 /*
 *   Twitter section
 */
-
-#loading_Container {
+ #loading_Container {
     padding:16px 0px 16px 0px;
-    text-align:center;  
+    text-align:center;
 }
- 
 #twitter_Feed {
     width:100%;
     font-family: Arial, Helvetica, sans-serif;
@@ -374,26 +310,21 @@ menu{
     color:#333;
     overflow:auto;
 }
- 
 #twitter_Feed h1 {
     color:#5F5F5F;
     margin:0px;
     padding:9px auto 9px auto;
     margin:auto;
     font-size:18px;
-    font-weight:lighter;    
+    font-weight:lighter;
 }
- 
 .twitter_Article, #loading_Container {
     border-top:1px dotted #CCC;
     width:100%;
 }
-
-.twitter_Headline
-{
+.twitter_Headline {
     padding: 10px;
 }
-
 .twitter_Pic {
     float:left;
     height:auto;
@@ -401,28 +332,22 @@ menu{
     max-width:45px;
     max-height:45px;
 }
- 
 .twitter_Pic img {
     float:left;
-    border-radius:7px;  
+    border-radius:7px;
     border:none;
     width: 100%;
     height:100%;
-     
 }
-.twitter_Author
-{
+.twitter_Author {
     text-align:right;
     font-size:0.6em;
 }
-
-.twitter_Author a
-{
+.twitter_Author a {
     text-decoration:none;
 }
- 
 /* -------- TEXT STYLING ------*/
-.twitter_Text {
+ .twitter_Text {
     width:100%;
     float:left;
     font-size:11px;
@@ -435,15 +360,14 @@ menu{
     padding-left:10px;
     padding-right:10px;
 }
-.twitter_Text a,  h1 a {
+.twitter_Text a, h1 a {
     color: #00acee;
     text-decoration: none;
 }
-.twitter_Text a:hover,  h1 a:hover {
+.twitter_Text a:hover, h1 a:hover {
     text-decoration: underline;
     color: #00acee;
 }
- 
 .tweet_Time {
     font-size:10px;
     color:#878787;
@@ -452,7 +376,6 @@ menu{
 .tweet_Time a, .tweet_Time a:hover {
     color:#878787;
 }
- 
 .tweetprofilelink a {
     color:#444;
     font-size:0.8em;
@@ -462,45 +385,42 @@ menu{
 .tweetprofilelink a:hover {
     color:#444;
 }
- 
 /* -------- FEED  ACTIONS ------*/
-#twitter_Actions {
+ #twitter_Actions {
     float:right;
-    margin-right:1px;   
+    margin-right:1px;
     margin-top:0px;
     display:none;
 }
 .intent {
     width:25px;
     height:16px;
-    float:left; 
+    float:left;
 }
-.intent a{
+.intent a {
     width:25px;
     height:16px;
     display:block;
     background-image:url(../Images/Side_Bar/tweet-actions.png);
-    float:left; 
-} 
-.intent a:hover{
+    float:left;
+}
+.intent a:hover {
     background-position:-25px 0px;
-} 
- 
-#intent_Retweet a{
+}
+#intent_Retweet a {
     background-position:0px -17px;
-} 
-#intent_Retweet a:hover{
+}
+#intent_Retweet a:hover {
     background-position:-25px -17px;
-} 
-#intent_Fave a{
+}
+#intent_Fave a {
     background-position:0px -36px;
-} 
-#intent_Fave a:hover{
+}
+#intent_Fave a:hover {
     background-position:-25px -36px;
-} 
- 
+}
 /* -------- RETWEET INDICATOR ------*/
-#retweet_indicator {
+ #retweet_indicator {
     width:14px;
     height:10px;
     background-image:url(../Images/Side_Bar/tweet-actions.png);
@@ -509,7 +429,6 @@ menu{
     margin-left:10px;
     float:left;
 }
-
 /*
 *   Clearfix
 */
@@ -527,7 +446,8 @@ menu{
 /* ------------
 *   Grid System
 *   by Graham Miller (see my web site Graham Robertson Miller) and is licensed under a Creative Commons Attribution 3.0 License.
-*
+*------------*/
+/* ------------
 *   GRID OF EIGHT   
 ------------ */
  .span_8_of_8 {
@@ -581,34 +501,25 @@ menu{
         width: 100%;
     }
 }
-
-
 /*  GRID OF THREE   ============================================================================= */
-
-	
-.span_3_of_3 {
-	width: 100%; 
+ .span_3_of_3 {
+    width: 100%;
 }
-
 .span_2_of_3 {
-	width: 66.1%; 
+    width: 66.1%;
 }
-
 .span_1_of_3 {
-	width: 32.2%; 
+    width: 32.2%;
 }
-
-
 /*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
-
-@media only screen and (max-width: 480px) {
-	.span_3_of_3 {
-		width: 100%; 
-	}
-	.span_2_of_3 {
-		width: 100%; 
-	}
-	.span_1_of_3 {
-		width: 100%;
-	}
+ @media only screen and (max-width: 480px) {
+    .span_3_of_3 {
+        width: 100%;
+    }
+    .span_2_of_3 {
+        width: 100%;
+    }
+    .span_1_of_3 {
+        width: 100%;
+    }
 }

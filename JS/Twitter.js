@@ -1,5 +1,6 @@
 //JQuery Twitter Feed. Coded by Tom Elliott @ www.webdevdoor.com (2013) based on https://twitter.com/javascripts/blogger.js
 //Requires JSON output from authenticating script: http://www.webdevdoor.com/php/authenticating-twitter-feed-timeline-oauth/
+//Changes by Andres Mrad (Q-ro).
 
 $(document).ready(function () {
     var displaylimit = 7;
@@ -20,7 +21,7 @@ $(document).ready(function () {
 	
 	$('#twitter_Feed').html(headerHTML + loadingHTML);
 	 
-    $.getJSON('../PHP/twitter.php', 
+    $.getJSON('../brainfreezenews-tweets.txt?'+Math.random(),
         function(feeds) {   
 		   //alert(feeds);
             var feedHTML = '';

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<?PHP require_once ( 'PHP/DB_Conect.php'); require_once ( 'PHP/home_Functions/Blog_Functions.php'); $page="Home" ;?>
+<?PHP require_once ( 'PHP/DB_Conect.php'); require_once ( 'PHP/home_Functions.php'); $page="Home"; include_once('PHP/cache_tweets_auto.php');?>
 
 <html lang="en">
     
@@ -41,7 +41,7 @@
             </div>
         </div>
         <div id="main_Content_Container" class="main_Content_Container clearfix">
-            <div id="main_Content_Wrapper" class="main_Content_Wrapper">
+            <div id="main_Content_Wrapper" class="main_Content_Wrapper clearfix">
                 <section id="main_Content" class="main_Content information_Container span_6_of_8">
                     <h1>Welcome to Brain Freeze Studios</h1>
                     <hr/>
@@ -53,7 +53,7 @@
                         
                             <ul class="latest_List">
                             <?PHP 
-                                $latest_Blogs = getLatestBlogpost(4,$PDO);
+                                $latest_Blogs = populateHomeInfo(4,'blog',$PDO);
                                 if($latest_Blogs == false)
                                 {
                             ?>       
@@ -81,7 +81,28 @@
                             <h3>Watch our latest videos</h3>
                         </div>
                         <div class="latest_Container">
+                        
                             <ul class="latest_List">
+                            <?PHP 
+                                $latest_Blogs = populateHomeInfo(4,'videos',$PDO);
+                                if($latest_Blogs == false)
+                                {
+                            ?>       
+                                <li> <?PHP echo "AAAAAARRRGGG D: , There are no videos to be displayed ... yet."; ?> </li>
+                            
+                            <?PHP
+                                } 
+                                else
+                                {
+                            ?>
+                                <li>
+                                    <span class="date span_1_of_3">qsdsad</span>
+                                    <span class="blog_List_Title span_1_of_3">my carrito loco.</span>
+                                    <span class="author span_1_of_3">por andres</span>
+                                </li>
+                            <?PHP 
+                                }
+                            ?>
                             </ul>
                         </div>
                     </div>
