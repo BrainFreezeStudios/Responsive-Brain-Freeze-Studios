@@ -21,7 +21,7 @@ require_once 'useful_library.php';
 
             $result = $select_stmt->fetchAll();
 
-            if($select_stmt->rowCount() >1)
+            if(count($result))
             {
                 /*
                 for($x = 0 ; $x < $result->num_rows ; $x ++)
@@ -65,7 +65,7 @@ require_once 'useful_library.php';
 
             $result = $select_stmt->fetchAll();
 
-            if($select_stmt->rowCount() > 0)
+            if(count($result))
             {
                 /*
                 for($x = 0 ; $x < $result->num_rows ; $x ++)
@@ -99,14 +99,14 @@ require_once 'useful_library.php';
                                     ORDER BY name ASC"))
         {
             
-            $select_stmt->bindValue(':id',$blogid);
+            $select_stmt->bindValue(':id',$blogid,PDO::PARAM_INT);
             $select_stmt->execute();
 
 
             $result = $select_stmt->fetchAll();
             
 
-            if($select_stmt->rowCount() > 0)
+            if(count($result))
             {
                 /*
                 for($x = 0 ; $x < $result->num_rows ; $x ++)
@@ -148,11 +148,11 @@ require_once 'useful_library.php';
                                             AND b.id = bt.blog_post_id
                                             ORDER BY b.date_posted ASC"))
        {
-            $select_stmt->bindValue(':tagid',$tagid);
+            $select_stmt->bindParam(':tagid',$tagid,PDO::PARAM_INT);
             $select_stmt->execute();
 
             $result = $select_stmt->fetchAll();
-            if($select_stmt->rowCount() > 0)
+            if(count($result))
             {
                 /*for($x = 0 ; $x < $result->num_rows ; $x ++)
                 {
@@ -199,11 +199,11 @@ require_once 'useful_library.php';
                                     WHERE id = :blogid LIMIT 1"))
         {
             
-            $select_stmt->bindValue(':blogid',$blogid);
+            $select_stmt->bindParam(':blogid',$blogid,PDO::PARAM_INT);
             $select_stmt->execute();
             $result = $select_stmt->fetchAll();
             
-            if($select_stmt->rowCount() >0)
+            if(count($result))
             {
                 /*
                 $blog = $result->fetch_assoc();

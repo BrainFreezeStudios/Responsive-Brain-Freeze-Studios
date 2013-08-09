@@ -32,7 +32,7 @@
             <div id="QroSlider" class="qroSlider">
                 <img class="slide" src="http://markwilcox.files.wordpress.com/2011/01/shutterstock_9779500.jpg" />
                 <img class="slide" src="http://markwilcox.files.wordpress.com/2011/01/shutterstock_9779500.jpg" />
-                <img class="slide" src="http://grandpill.files.wordpress.com/2012/11/frozen-michigan-pier_30737_990x742.jpg" />
+                <img class="slide" src="http://markwilcox.files.wordpress.com/2011/01/shutterstock_9779500.jpg" />
                 <div class="qroSlider_controls">
                     <div class="page prev" data-target="prev">&lsaquo;</div>
                     <div class="page next" data-target="next">&rsaquo;</div>
@@ -63,13 +63,17 @@
                                 } 
                                 else
                                 {
+                                	foreach($latest_Blogs as $blog)
+                                	{
+                                        //echo var_dump($blog);
                             ?>
-                                <li>
-                                    <span class="date span_1_of_3">qsdsad</span>
-                                    <span class="blog_List_Title span_1_of_3">my carrito loco.</span>
-                                    <span class="author span_1_of_3">por andres</span>
+                                <li class="list_Item">
+                                    <span class="date span_1_of_3"><?PHP echo $blog["date_posted"]; ?></span>
+                                    <span class="list_Title span_1_of_3"><?PHP echo $blog["title"]; ?></span>
+                                    <span class="author span_1_of_3"><?PHP echo $blog["first_name"]." ".$blog["last_name"]." (".$blog["nickname"].")"; ?></span>
                                 </li>
                             <?PHP 
+                            		}
                                 }
                             ?>
                             </ul>
@@ -84,8 +88,8 @@
                         
                             <ul class="latest_List">
                             <?PHP 
-                                $latest_Blogs = populateHomeInfo(4,'videos',$PDO);
-                                if($latest_Blogs == false)
+                                $latest_Videos = populateHomeInfo(4,'videos',$PDO);
+                                if($latest_Videos == false)
                                 {
                             ?>       
                                 <li> <?PHP echo "AAAAAARRRGGG D: , There are no videos to be displayed ... yet."; ?> </li>
@@ -94,29 +98,138 @@
                                 } 
                                 else
                                 {
+                                	foreach($latest_Videos as $videos)
+                                	{
                             ?>
-                                <li>
-                                    <span class="date span_1_of_3">qsdsad</span>
-                                    <span class="blog_List_Title span_1_of_3">my carrito loco.</span>
-                                    <span class="author span_1_of_3">por andres</span>
+                                <li class="list_Item">
+                                    <span class="date span_1_of_3"><?PHP echo $videos["date_posted"]; ?></span>
+                                    <span class="blog_List_Title span_1_of_3"><?PHP echo $videos["title"]; ?></span>
+                                    <span class="author span_1_of_3"><?PHP echo $videos["first_name"]." ".$videos["last_name"]." (".$videos["nickname"].")"; ?></span>
                                 </li>
                             <?PHP 
+                            		}
+                            	}
+                            ?>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div id="home_latest_Images" class="latest_Images home_Information_Containers">
+                        <div class="header images_Header">
+                            <h3>Watch our latest gallery entries</h3>
+                        </div>
+                        <div class="latest_Container">
+                        
+                            <ul class="latest_List">
+                            <?PHP 
+                                $latest_Images = populateHomeInfo(4,'gallery',$PDO);
+                                if($latest_Images == false)
+                                {
+                            ?>       
+                                <li> <?PHP echo "AAAAAARRRGGG D: , There are no images to be displayed ... yet."; ?> </li>
+                            
+                            <?PHP
+                                } 
+                                else
+                                {
+                                	foreach($latest_Images as $image)
+                                	{
+                            ?>
+                                <li>
+                                    <span class="date span_1_of_3"><?PHP echo $images["date_created"]; ?></span>
+                                    <span class="blog_List_Title span_1_of_3"><?PHP echo $images["title"]; ?></span>
+                                    <span class="author span_1_of_3"><?PHP echo $images["first_name"]." ".$images["last_name"]." (".$images["nickname"].")"; ?></span>
+                                </li>
+                            <?PHP 
+                            		}
                                 }
                             ?>
                             </ul>
                         </div>
                     </div>
                     
+                    <div id="home_latest_Projects" class="latest_projects home_Information_Containers">
+                        <div class="header code_Header">
+                            <h3>Explore our latest code projects</h3>
+                        </div>
+                        <div class="latest_Container">
+                        
+                            <ul class="latest_List">
+                            <?PHP 
+                                $latest_Code = populateHomeInfo(4,'code',$PDO);
+                                if($latest_Code == false)
+                                {
+                            ?>       
+                                <li> <?PHP echo "AAAAAARRRGGG D: , There are no code projects to be displayed ... yet."; ?> </li>
+                            
+                            <?PHP
+                                } 
+                                else
+                                {
+                                	foreach($latest_Code as $code)
+                                	{
+                            ?>
+                                <li>
+                                    <span class="date span_1_of_3"><?PHP echo $code["date_created"]; ?></span>
+                                    <span class="blog_List_Title span_1_of_3"><?PHP echo $code["title"]; ?></span>
+                                    <span class="author span_1_of_3"><?PHP echo $code["first_name"]." ".$code["last_name"]." (".$code["nickname"].")"; ?></span>
+                                </li>
+                            <?PHP 
+                            		}
+                                }
+                            ?>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div id="home_latest_Steam" class="latest_steam home_Information_Containers">
+                        <div class="header steam_Header">
+                            <h3>Buy some of our latest steam submissions</h3>
+                        </div>
+                        <div class="latest_Container">
+                        
+                            <ul class="latest_List">
+                            <?PHP 
+                                $latest_Steam = populateHomeInfo(4,'steam',$PDO);
+                                if($latest_Steam == false)
+                                {
+                            ?>       
+                                <li> <?PHP echo "AAAAAARRRGGG D: , There are no steam submitions to be displayed ... yet."; ?> </li>
+                            
+                            <?PHP
+                                } 
+                                else
+                                {
+                                	foreach($latest_Steam as $steam)
+                                	{
+                            ?>
+                                <li>
+                                    <span class="date span_1_of_3"><?PHP echo $steam["date_created"]; ?></span>
+                                    <span class="blog_List_Title span_1_of_3"><?PHP echo $steam["title"]; ?></span>
+                                    <span class="author span_1_of_3"><?PHP echo $steam["first_name"]." ".$steam["last_name"]." (".$steam["nickname"].")"; ?></span>
+                                </li>
+                            <?PHP 
+                            		}
+                                }
+                            ?>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div id="home_donations" class="donations home_Information_Containers">
+                        <div class="header donations_Header">
+                            <h3>Help us grow</h3>
+                        </div>
+                        <div class="latest_Container">
+                            <!-- Add donation links here -->
+                        </div>
+                    </div>
+                    
+                    
                 </section>
-                <aside id="side_Bar" class="side_Bar span_2_of_8">
-                    
-                    <div class="header twitter_Header">
-                        <h3>Latest Tweets</h3>
-                    </div>
-                    <div id="twitter_Feed" class="twitter">
-                    </div>
-                    
-                </aside>
+                
+                <?PHP require_once ( 'Templates/sidebar_template.php'); ?>
+               
             </div>
         </div>
         <footer></footer>

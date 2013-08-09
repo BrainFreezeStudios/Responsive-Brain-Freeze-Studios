@@ -6,10 +6,9 @@
 
 .qroSlider{
     position: relative;
-    padding-top: 50%;
+    padding-top: 58%;
     overflow: hidden;
     width:90%;
-    max-width:1000px;
     max-height:400px;
     text-align:left;
     margin-left:auto;
@@ -37,7 +36,7 @@
   width: 50px;
   font-size: 100px;
   text-align: center;
-  color: #cdcdcd;
+  color: #111;
   top: 50%;
   left: 0;
   z-index: 4;
@@ -50,7 +49,6 @@
 .qroSlider .prev:hover,
 .qroSlider .next:hover{
   opacity: 1;
-    color:#fff;
 }
 
 .qroSlider .next{
@@ -73,7 +71,7 @@
   width: 15px;
   height: 15px;
   margin: 0 7px;
-  background: #ccc;
+  background: #222;
   opacity: .8;
   text-indent: -999px;
   border-radius: 999px;
@@ -85,4 +83,5 @@
 .qroSlider .pager_list li.active{
   opacity: 1;
     background-color:#8eedec;
+    text-shadow: white 0.1em 0.1em 0.2em
 }

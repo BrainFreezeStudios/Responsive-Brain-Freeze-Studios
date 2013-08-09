@@ -24,13 +24,17 @@ function populateHomeInfo($number, $section, $connection)
     
     if($select_stmt = $connection->prepare($query))
     {
-    
-        $select_stmt->bindValue(':limit',$number);
+        //echo "here";
+        $select_stmt->bindParam(':limit',$number, PDO::PARAM_INT);
         $select_stmt->execute();
         $result = $select_stmt->FetchAll();
         
-        if($select_stmt->rowCount() >0)
+        //echo "here tooooooo";
+        //echo count($result);
+        
+        if(count($result))
         {
+            //echo "here too and too";
             return $result;
         }
         else

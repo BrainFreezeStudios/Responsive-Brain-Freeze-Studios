@@ -204,6 +204,9 @@ menu {
         );
     */
 }
+#Blog_Slide_Section {
+    background-color:#8A3891;
+}
 /*
 *   Main content section
 */
@@ -235,9 +238,9 @@ menu {
 }
 .home_Information_Containers {
     width:90%;
-    margin-top:25px;
     padding:auto;
     margin:auto;
+    margin-top:75px;
 }
 .header {
     color:white;
@@ -251,12 +254,33 @@ menu {
 .videos_Header {
     background-color:#cc8a26;
 }
+.images_Header {
+    background-color:#ab242b;
+}
+.code_Header {
+    background-color:#26ab5b;
+}
+.steam_Header {
+    background-color:#3b3938;
+}
+.donations_Header {
+    background-color:#21b1d1;
+    /*1a2431*/
+}
 .latest_List {
     text-decoration:none;
     list-style-type: none;
     text-align:center;
     margin:0;
     padding:0;
+}
+.list_Item {
+    width:100%;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+.list_Item:hover {
+    background-color:#ccc;
 }
 .lastes_Blog_List span {
     margin-left:5px;
@@ -276,7 +300,7 @@ menu {
 }
 .latest_Container {
     padding:10px 0 10px 0;
-    border: 2px groove;
+    border: 2px groove #eee;
 }
 .twitter_Header {
     background-color:#496fad;
@@ -295,6 +319,193 @@ menu {
     margin-top: 0;
     float:right;
 }
+
+/*
+*   Blog Section
+*/
+
+.header h2 a
+{
+    text-decoration: none;
+    color:white;
+    padding-top:1px;
+    padding-bottom:1px;
+    margin-top: 15px;
+}
+
+.header h2 a:hover
+{
+    color: #000;
+}
+
+.blog_Info_And_Social
+{
+    float: left;
+    text-align: center;
+    display: block;
+}
+
+.date_Posted_Container
+{
+    
+}
+
+.time_Container
+{
+   margin-bottom: 15px; 
+}
+#date_And_Author
+{
+    margin-bottom: 10px; 
+}
+
+#post_Author
+{
+    margin-bottom: 20px;
+    font-size: 1.3em;
+}
+
+#nickname
+{
+    font-size: 0.7em;
+    font-weight: lighter;
+}
+
+.day
+{
+    font-weight: lighter;
+    font-size: 1.5em;
+}
+
+.month
+{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.time_header
+{
+    font-size: 1.1em;
+}
+
+.blog_Post_Content
+{
+    float: right;
+    text-align: left;
+    width:80%;
+    font-size: 1.2em;
+    font-weight: 300;
+    display: block;
+}
+
+.blog_Post_Wrapper
+{
+    width: 100%;
+}
+
+.social_Links_List
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.blog_Information_Containers {
+    width:90%;
+    padding:auto;
+    margin:auto;
+    margin-top:15px;
+}
+
+.social_Icon
+{
+    opacity: 0.6;
+}
+
+.social_Icon img
+{
+    width: 50px;
+    height: 50px;
+}
+
+.social_Icon:hover
+{
+    opacity: 1;
+}
+
+.tag_Container{
+    margin:0;
+    padding:0;
+    position:absolute;
+    right:24px;
+    bottom:-12px;
+    list-style:none;
+    clear: both;
+    width: 100%;
+}
+
+.blog_Tag,
+.blog_Tag a{
+    float:left;
+    height:24px;
+    line-height:24px;
+    position:relative;
+    font-size:11px;
+}
+
+.blog_Tag a{
+    margin-left:20px;
+    padding:0 10px 0 12px;
+    background:#8A3891;
+    color:#fff;
+    text-decoration:none;
+    -moz-border-radius-bottomright:4px;
+    -webkit-border-bottom-right-radius:4px;
+    border-bottom-right-radius:4px;
+    -moz-border-radius-topright:4px;
+    -webkit-border-top-right-radius:4px;   
+    border-top-right-radius:4px;   
+}
+ 
+/* parte izquierda de cada etiqueta en forma de triangulo */
+.blog_Tag a:before{
+    content:"";
+    float:left;
+    position:absolute;
+    top:0;
+    left:-12px;
+    width:0;
+    height:0;
+    border-color:transparent #8A3891 transparent transparent;
+    border-style:solid;
+    border-width:12px 12px 12px 0;     
+}
+ 
+/* parte derecha de cada etiqueta un circulo blanco */
+.blog_Tag a:after{
+    content:"";
+    position:absolute;
+    top:10px;
+    left:0;
+    float:left;
+    width:4px;
+    height:4px;
+    -moz-border-radius:2px;
+    -webkit-border-radius:2px;
+    border-radius:2px;
+    background:#fff;
+    -moz-box-shadow:-1px -1px 2px #8A3891;
+    -webkit-box-shadow:-1px -1px 2px #8A3891;
+    box-shadow:-1px -1px 2px #8A3891;
+}
+
+.blog_Tag a:hover{
+    background:#555;
+}  
+.blog_Tag a:hover:before{
+    border-color:transparent #555 transparent transparent;
+}
+
 /*
 *   Twitter section
 */
@@ -447,6 +658,7 @@ menu {
 *   Grid System
 *   by Graham Miller (see my web site Graham Robertson Miller) and is licensed under a Creative Commons Attribution 3.0 License.
 *------------*/
+
 /* ------------
 *   GRID OF EIGHT   
 ------------ */
