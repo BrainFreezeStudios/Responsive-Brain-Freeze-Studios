@@ -30,15 +30,17 @@ include_once('PHP/cache_tweets_auto.php'); ?>
     <body>
 <?PHP require_once ( 'Templates/header_template.php'); ?>
 
-        <div id="<?PHP echo($page); ?>_Slide_Section" class="slide_Section span_8_of_8">
-            <div id="QroSlider" class="qroSlider">
-                <img class="slide" src="http://markwilcox.files.wordpress.com/2011/01/shutterstock_9779500.jpg" />
-                <img class="slide" src="http://markwilcox.files.wordpress.com/2011/01/shutterstock_9779500.jpg" />
-                <img class="slide" src="http://markwilcox.files.wordpress.com/2011/01/shutterstock_9779500.jpg" />
-                <div class="qroSlider_controls">
-                    <div class="page prev" data-target="prev">&lsaquo;</div>
-                    <div class="page next" data-target="next">&rsaquo;</div>
-                    <ul class="pager_list"></ul>
+        <div id="<?PHP echo($page); ?>_Slide_Section" class="slide_Section span_8_of_8 wrapper">
+            <div class="wrapper">
+                <div id="QroSlider" class="qroSlider">
+                    <img class="slide" src="http://markwilcox.files.wordpress.com/2011/01/shutterstock_9779500.jpg" />
+                    <img class="slide" src="http://markwilcox.files.wordpress.com/2011/01/shutterstock_9779500.jpg" />
+                    <img class="slide" src="http://markwilcox.files.wordpress.com/2011/01/shutterstock_9779500.jpg" />
+                    <div class="qroSlider_controls">
+                        <div class="page prev" data-target="prev">&lsaquo;</div>
+                        <div class="page next" data-target="next">&rsaquo;</div>
+                        <ul class="pager_list"></ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -308,5 +310,5 @@ include_once('PHP/cache_tweets_auto.php'); ?>
             </div>
         </div>
     </body>
-    <footer>
-    </footer>
+    <?PHP require_once('./Templates/footer_Template.php'); ?>
+</html>

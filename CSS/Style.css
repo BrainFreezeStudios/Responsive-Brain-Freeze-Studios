@@ -28,6 +28,13 @@ body {
     width:100%;
     font-family:'Benton Sans', lekton, helvetica, arial, sans-serif;
 }
+
+footer
+{
+    padding: 15px 0 10px 0;
+    width: 100%;
+    background-color:#434343;
+}
 /*
 *   Header items
 */
@@ -181,12 +188,16 @@ menu {
 /*
 *   Slide Section
 */
- .slide_Section {
+
+.slide_Section
+{
     width:100%;
     padding-top:30px;
     padding-bottom: 30px;
 }
-#Home_Slide_Section {
+
+#Home_Slide_Section
+{
     background-color: #34b8e7;
     /*
     background-image: linear-gradient(bottom, #2D77A8 21%, #35A6FC 70%);
@@ -204,9 +215,17 @@ menu {
         );
     */
 }
-#Blog_Slide_Section {
+
+#Blog_Slide_Section
+{
     background-color:#8A3891;
 }
+
+#Gallery_Slide_Section
+{
+    background-color: #ab242b;
+}
+
 /*
 *   Main content section
 */

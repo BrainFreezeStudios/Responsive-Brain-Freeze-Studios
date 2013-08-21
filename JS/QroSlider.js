@@ -132,3 +132,11 @@
         return methods.init.apply(this, arguments);
     };
 })(jQuery);
+
+$(function () {
+    $('#QroSlider').QroSlider({
+        slide_Duration: 4000,
+        fade_Duration: 800,
+        thumbnails: false
+    });
+});

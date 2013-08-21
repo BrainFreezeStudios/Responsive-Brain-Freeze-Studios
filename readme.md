@@ -19,7 +19,7 @@ Any way, enjoy the code, leave comments, modify and fork, laugh at my errors ;),
 
 Q-r0.
 
-Copyright 2012 by Q-r0 at www.BrainFreezeStudios.com
+Copyright 2012 by Andres Mrad (Q-ro) at www.BrainFreezeStudios.com
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by

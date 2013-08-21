@@ -1,10 +1,10 @@
 <?php
-function getGallery($mysqli)
+function getGallery($PDO)
 {
-    if($select_stmt = $mysqli->prepare("SELECT
+    if($select_stmt = $PDO->prepare("SELECT
                                             id,
                                             title,
-                                            url,
+                                            image,
                                             description,
                                             (SELECT first_name FROM hackers WHERE hackers.id = images.author_id ) as first_name,
                                             (SELECT last_name FROM hackers WHERE hackers.id = images.author_id ) as last_name,
@@ -13,7 +13,7 @@ function getGallery($mysqli)
                                             thumbnail,
                                             creation_date
                                          FROM
-                                            images
+                                            gallery
                                          ORDER BY creation_date ASC"))
     {
         $select_stmt->execute();
@@ -32,24 +32,25 @@ function getGallery($mysqli)
         }
         else
         {
-            $gallery = array(array("id" => NULL, "title"=> "No images where found", "description" => "No images where found"));
-            return $gallery;
+            //$gallery = array(array("id" => NULL, "title"=> "No images where found", "description" => "No images where found"));
+            return false;
         }
     }
+    return false;
 }
 
-function addImages($title, $url, $description, $userid, $license, $thumbnail, $mysqli) 
+function addImages($title, $url, $description, $userid, $license, $thumbnail, $PDO) 
 {
-    if ($insert_stmt = $mysqli->prepare("INSERT INTO images (title, url, description, author_id, license, thumbnail) VALUES (?, ?, ?, ?, ?, ?)"))
+    if ($insert_stmt = $PDO->prepare("INSERT INTO images (title, url, description, author_id, license, thumbnail) VALUES (?, ?, ?, ?, ?, ?)"))
     {
         $insert_stmt->bind_param("sssiss",$title,$url,$description,$userid,$license,$thumbnail);
         $insert_stmt->execute();
     }
 }
 
-function editImages($imageid,$title, $url, $description, $userid, $license, $thumbnail, $mysqli)
+function editImages($imageid,$title, $url, $description, $userid, $license, $thumbnail, $PDO)
 {
-    if($update_stmt = $mysqli->prepare("UPDATE
+    if($update_stmt = $PDO->prepare("UPDATE
                                             images
                                         SET
                                             title=?,
@@ -65,9 +66,9 @@ function editImages($imageid,$title, $url, $description, $userid, $license, $thu
     }
 }
 
-function deleteImages($imageid,$mysqli)
+function deleteImages($imageid,$PDO)
 {
-    if ($delete_stmt = $mysqli->prepare("DELETE
+    if ($delete_stmt = $PDO->prepare("DELETE
                                          FROM
                                             images
                                          WHERE
@@ -78,9 +79,9 @@ function deleteImages($imageid,$mysqli)
         }
 }
 
-function getImageById($imageid,$mysqli)
+function getImageById($imageid,$PDO)
 {
-    if($select_stmt = $mysqli->prepare("SELECT
+    if($select_stmt = $PDO->prepare("SELECT
                                             id,
                                             title,
                                             url,

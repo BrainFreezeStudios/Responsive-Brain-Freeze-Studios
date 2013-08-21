@@ -4,46 +4,66 @@
     Creation date: June 20 2013.
 */
 
+
 .qroSlider{
     position: relative;
-    padding-top: 58%;
+    width:100%;
+    max-width:1000px;
+    max-height:500px;
     overflow: hidden;
-    width:90%;
-    max-height:400px;
-    text-align:left;
-    margin-left:auto;
-    margin-right:auto;
+    padding-top:50%;
 } 
- 
+
+
 .qroSlider .slide{
     position: absolute;
     width: 100%;
     height: 100%;
+    max-height:500px;
+    max-width:1000px;
     top: 0;
     z-index: 1;
     opacity: 0;
 }
- 
-.qroSlider img.slide{
-    height: auto;
+
+.qroSlider .slide img
+{
+    position:absolute;
+    z-index:1;
+    width:100%;
+    height:100%;
+    
 }
+
+.qroSlider .slide p
+{
+    position:absolute;
+    z-index:3;
+    width:20%;
+    margin-left:80%;
+    margin-top:-1px;
+    font-weight:lighter;
+    font-size:0.9em;
+    color:white;
+    background-color:#333;
+    opacity:0.85;
+    height:100%;
+}
+
 
 .qroSlider .prev,
 .qroSlider .next{
-  position: absolute;
-  height: 80px;
-  line-height: 55px;
-  width: 50px;
-  font-size: 100px;
-  text-align: center;
-  color: #111;
-  top: 50%;
+    float:left;
+    display:inline-block;
+  font-size: 5em;
+  color: #fff;
   left: 0;
   z-index: 4;
-  margin-top: -25px;
+  margin-top: -35px;
   cursor: pointer;
-  opacity: .8;
+  opacity: .7;
   transition: all 150ms;
+  baseline-shift: baseline;
 }
 
 .qroSlider .prev:hover,
@@ -51,18 +71,11 @@
   opacity: 1;
 }
 
-.qroSlider .next{
-  left: auto;
-  right: 0;
-}
-
 .qroSlider .pager_list{
-  position: absolute;
-  width: 100%;
   height: 40px;
   line-height: 40px;
   bottom: 0;
-  text-align: center;
+  text-align: left;
   z-index: 4;
 }
 
@@ -71,17 +84,35 @@
   width: 15px;
   height: 15px;
   margin: 0 7px;
-  background: #222;
-  opacity: .8;
+  background: #fff;
+  opacity: .7;
   text-indent: -999px;
   border-radius: 999px;
   cursor: pointer;
   transition: all 150ms;
+  
 }
 
 .qroSlider .pager_list li:hover,
 .qroSlider .pager_list li.active{
   opacity: 1;
     background-color:#8eedec;
-    text-shadow: white 0.1em 0.1em 0.2em
+}
+
+.qroSlider_controls
+{
+    position:relative;
+    background-color:#222;
+    z-index:3;
+    clear:both;
+    top:25px;
+}
+
+.wrapper
+{
+    max-width:980px;
+    overflow:visible;
+    text-align: left;
+    padding: auto;
+    margin: auto;
 }
