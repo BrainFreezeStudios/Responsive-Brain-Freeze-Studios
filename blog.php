@@ -1,5 +1,5 @@
 <?PHP require_once ( 'PHP/DB_Conect.php');
-require_once ( 'PHP/blog_Functions.php');
+require_once ( 'PHP/public_resources_functions.php');
 $page = "Blog";
 include_once('PHP/cache_tweets_auto.php'); ?>
 <!DOCTYPE HTML>
@@ -30,12 +30,31 @@ include_once('PHP/cache_tweets_auto.php'); ?>
     <body>
 <?PHP require_once ( 'Templates/header_template.php'); ?>
 
-        <div id="<?PHP echo($page); ?>_Slide_Section" class="slide_Section span_8_of_8 wrapper">
+        <div id="<?PHP echo($page); ?>_Slide_Section" class="slide_Section span_8_of_8 ">
             <div class="wrapper">
                 <div id="QroSlider" class="qroSlider">
-                    <img class="slide" src="http://markwilcox.files.wordpress.com/2011/01/shutterstock_9779500.jpg" />
-                    <img class="slide" src="http://markwilcox.files.wordpress.com/2011/01/shutterstock_9779500.jpg" />
-                    <img class="slide" src="http://markwilcox.files.wordpress.com/2011/01/shutterstock_9779500.jpg" />
+                    <div class="slide">
+                        <img src="http://markwilcox.files.wordpress.com/2011/01/shutterstock_9779500.jpg" />
+                        <p>
+                        Some text and stuff</p>
+                    </div>
+                    <div class="slide">
+                        <img src="http://markwilcox.files.wordpress.com/2011/01/shutterstock_9779500.jpg" />
+                        <p>
+                        Some text and stuff</p>
+                    </div>
+                    <div class="slide">
+                        <img src="http://markwilcox.files.wordpress.com/2011/01/shutterstock_9779500.jpg" />
+                        <p>
+                        Some text and stuff</p>
+                    </div>
+                    <div class="slide">
+                        <img src="http://markwilcox.files.wordpress.com/2011/01/shutterstock_9779500.jpg" />
+                        <p>
+                        Some text and stuff</p>
+                    </div>
+                    
+                    
                     <div class="qroSlider_controls">
                         <div class="page prev" data-target="prev">&lsaquo;</div>
                         <div class="page next" data-target="next">&rsaquo;</div>
@@ -54,15 +73,15 @@ include_once('PHP/cache_tweets_auto.php'); ?>
                     $blog_description = true;
 
                     if (isset($_GET['blogid']) && !trim($_GET['blogid']) == false) {
-                        $articles = getBlogById($_GET['blogid'], $PDO);
+                        $articles = getResourcesPerId($PDO,"blog",$_GET['blogid']);
                         $blog_list = false;
                         $blog_description = false;
                     } elseif (isset($_GET["tagid"]) && !trim($_GET["tagid"]) == false) {
-                        $articles = getBlogsByTag($_GET["tagid"], $PDO);
+                        $articles = getResourcesPerTag($PDO,"blog",$_GET["tagid"]);
                         $blog_list = false;
                         $tag_list = true;
                     } elseif ($blog_list == true && $tag_list == false) {
-                        $articles = getBlogPosts($PDO);
+                        $articles = getResourcesList($PDO,"blog");
                     }
                     
                     if($blog_list == true || $tag_list == true)
@@ -73,16 +92,16 @@ include_once('PHP/cache_tweets_auto.php'); ?>
 
                     if (($articles != false)) {
                         foreach ($articles as $article) {
-                            $date_posted = new DateTime($article['date_posted']);
+                            $date_posted = new DateTime($article['create_time']);
 
-                            if (isset($article['date_updated']) && !trim($article['date_updated']) === ' ') {
-                                $date_updated = new DateTime($articles['date_updated']);
+                            if (isset($article['update_time']) && !trim($article['update_time']) === ' ') {
+                                $date_updated = new DateTime($articles['update_time']);
                             }
                             ?>
                             <article id="blog_Post" class="latest_Blogs blog_Information_Containers clearfix">
                                 <div class="header blogpost_Header">
                                     <h2>
-                                        <a href="blog.php?blogid=<?PHP echo $article['id']; ?>">
+                                        <a href="blog.php?blogid=<?PHP echo $article['id_resources']; ?>">
                                             <?PHP echo $article['title']; ?>
                                         </a>
                                     </h2>
@@ -213,7 +232,7 @@ include_once('PHP/cache_tweets_auto.php'); ?>
                                                 <li class="social_Icon">
                                                     <?php
                                                     $title = urlencode($article['title']);
-                                                    $url = urlencode("http://www.BrainFreezeStudios.com/blog.php?blogid=" . $article['id']);
+                                                    $url = urlencode("http://www.BrainFreezeStudios.com/blog.php?blogid=" . $article['id_resources']);
                                                     $summary = urlencode($article['description']);
                                                     $image = urlencode("http://www.BrainFreezeStudios.com/images/facebookpreviewicon.png");
                                                     ?>
@@ -235,7 +254,7 @@ include_once('PHP/cache_tweets_auto.php'); ?>
                                             }
                                             else
                                             {
-                                                echo $article["post"];
+                                                echo $article["content"];
                                             }
                                             ?>
                                         
@@ -245,19 +264,21 @@ include_once('PHP/cache_tweets_auto.php'); ?>
                                     
                                     <div id="tag_Container">
                                         <?PHP
-                                            $tags = getBlogTags($article["id"],$PDO);
+                                        $tags = explode(',', $article["tags"]);    
+                                        $idTags = explode(',', $article["id_tags"]);    
                                             
-                                            if($tags == false)
+                                            if (isset($tags) && !empty($tags))
                                             {
-                                                echo "<div class='blog_Tag'><a>no tags to display</a></div>";
+                                                for( $i = 0; $i < count($tags); $i++)                                                
+                                                {
+                                                    echo "<div class='blog_Tag'><a href='http://www.BrainFreezeStudios.com/blog.php?tagid=".$idTags[$i]."'>".$tags[$i]."</a></div>";
+                                                }
                                                 //echo "<div class='blog_Tag'><a href='http://www.BrainFreezeStudios.com/blog.php?tagid=1'> tag of testing </a></div> <div class='blog_Tag'><a href='http://www.BrainFreezeStudios.com/blog.php?tagid=1'> tag of testing2 </a></div> ";
                                             }
                                             else
                                             {
-                                                foreach ($tags as $tag)
-                                                {
-                                                    echo "<div class='blog_Tag'><a href='http://www.BrainFreezeStudios.com/blog.php?tagid=".$tag["tag_id"]."'>".$tag["name"]."</a></div>";
-                                                }
+                                                echo "<div class='blog_Tag'><a>no tags to display</a></div>";
+                                                
                                             }
                                         ?>
                                     </div>
@@ -309,6 +330,7 @@ include_once('PHP/cache_tweets_auto.php'); ?>
                 <?PHP require_once ( 'Templates/sidebar_template.php'); ?>
             </div>
         </div>
+        <?PHP require_once('./Templates/footer_Template.php'); ?>
     </body>
-    <?PHP require_once('./Templates/footer_Template.php'); ?>
+    
 </html>

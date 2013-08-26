@@ -1,5 +1,10 @@
 <!DOCTYPE html>
-<?PHP require_once ( 'PHP/DB_Conect.php'); require_once ( 'PHP/home_Functions.php'); $page="Home"; include_once('PHP/cache_tweets_auto.php');?>
+<?PHP   
+    require_once ( 'PHP/DB_Conect.php'); 
+    require_once ( 'PHP/home_Functions.php'); 
+    $page="Home"; 
+    include_once('PHP/cache_tweets_auto.php');
+?>
 
 <html lang="en">
     
@@ -89,7 +94,7 @@
                                         //echo var_dump($blog);
                             ?>
                                 <li class="list_Item">
-                                    <span class="date span_1_of_3"><?PHP echo $blog["date_posted"]; ?></span>
+                                    <span class="date span_1_of_3"><?PHP echo $blog["create_time"]; ?></span>
                                     <span class="list_Title span_1_of_3"><?PHP echo $blog["title"]; ?></span>
                                     <span class="author span_1_of_3"><?PHP echo $blog["first_name"]." ".$blog["last_name"]." (".$blog["nickname"].")"; ?></span>
                                 </li>

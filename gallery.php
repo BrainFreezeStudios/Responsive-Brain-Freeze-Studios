@@ -71,8 +71,6 @@ include_once('PHP/cache_tweets_auto.php'); ?>
                 
             </div>
         </div>
+        <?PHP require_once('./Templates/footer_Template.php'); ?>
     </body>
-        
-    <?PHP require_once('./Templates/footer_Template.php'); ?>
-        
 </html>
