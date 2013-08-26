@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?PHP   
     require_once ( 'PHP/DB_Conect.php'); 
-    require_once ( 'PHP/home_Functions.php'); 
+    require_once ( 'PHP/public_resources_functions.php'); 
     $page="Home"; 
     include_once('PHP/cache_tweets_auto.php');
 ?>
@@ -79,7 +79,7 @@
                         
                             <ul class="latest_List">
                             <?PHP 
-                                $latest_Blogs = populateHomeInfo(4,'blog',$PDO);
+                                $latest_Blogs = getResourceListLimit(4,'blog',$PDO);
                                 if($latest_Blogs == false)
                                 {
                             ?>       
@@ -114,7 +114,7 @@
                         
                             <ul class="latest_List">
                             <?PHP 
-                                $latest_Videos = populateHomeInfo(4,'videos',$PDO);
+                                $latest_Videos = getResourceListLimit(4,'videos',$PDO);
                                 if($latest_Videos == false)
                                 {
                             ?>       
@@ -148,7 +148,7 @@
                         
                             <ul class="latest_List">
                             <?PHP 
-                                $latest_Images = populateHomeInfo(4,'gallery',$PDO);
+                                $latest_Images = getResourceListLimit(4,'gallery',$PDO);
                                 if($latest_Images == false)
                                 {
                             ?>       
@@ -182,7 +182,7 @@
                         
                             <ul class="latest_List">
                             <?PHP 
-                                $latest_Code = populateHomeInfo(4,'code',$PDO);
+                                $latest_Code = getResourceListLimit(4,'code',$PDO);
                                 if($latest_Code == false)
                                 {
                             ?>       
@@ -216,7 +216,7 @@
                         
                             <ul class="latest_List">
                             <?PHP 
-                                $latest_Steam = populateHomeInfo(4,'steam',$PDO);
+                                $latest_Steam = getResourceListLimit(4,'steam',$PDO);
                                 if($latest_Steam == false)
                                 {
                             ?>       

@@ -156,5 +156,16 @@ function editBlog($blogid,$title,$description,$blog,$tags,$connection)
             $delete_stmt->execute();
         }
     }
+    
+        function getTagAsString($blogid,$connection)
+    {
+        $tags = getBlogTags($blogid,$connection);
+        $stringtags="";
+        foreach ($tags as $tag)
+        {
+              $stringtags = $stringtags.$tag['name'].",";
+        }
+        return $stringtags;
+    }
 
 ?>
