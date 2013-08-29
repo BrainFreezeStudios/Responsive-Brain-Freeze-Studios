@@ -40,7 +40,7 @@
     position:absolute;
     z-index:3;
     width:20%;
-    margin-left:80%;
+    margin-left:76%;
     margin-top:-1px;
     font-weight:lighter;
     font-size:0.9em;
@@ -48,6 +48,13 @@
     background-color:#333;
     opacity:0.85;
     height:100%;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+.qroSlider .slide p strong
+{
+    font-size:1.2em;
 }
 
 
@@ -55,11 +62,11 @@
 .qroSlider .next{
     float:left;
     display:inline-block;
-  font-size: 5em;
+  font-size: 4em;
   color: #fff;
   left: 0;
   z-index: 4;
-  margin-top: -35px;
+  margin-top: -17px;
   cursor: pointer;
   opacity: .7;
   transition: all 150ms;

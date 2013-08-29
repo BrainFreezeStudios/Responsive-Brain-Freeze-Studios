@@ -37,14 +37,14 @@
             <div class="wrapper">
                 <div id="QroSlider" class="qroSlider">
                     <div class="slide">
-                        <img src="http://markwilcox.files.wordpress.com/2011/01/shutterstock_9779500.jpg" />
+                        <img src="Images/Slides/Home/silde1.jpg" />
                         <p>
-                        Some text and stuff</p>
+                            <br/><strong>Welcome !</strong><br/><br/>Welcome to brain freeze studios website, feel free to have a look around.</p>
                     </div>
                     <div class="slide">
-                        <img src="http://markwilcox.files.wordpress.com/2011/01/shutterstock_9779500.jpg" />
+                        <img src="Images/Slides/Home/slide2.png" />
                         <p>
-                        Some text and stuff</p>
+                        <br/><strong>Images</strong><br/><br/>Do you enjoy digital creations ? have a look around our gallery or video sections.</p>
                     </div>
                     <div class="slide">
                         <img src="http://markwilcox.files.wordpress.com/2011/01/shutterstock_9779500.jpg" />
@@ -128,7 +128,7 @@
                                 	{
                             ?>
                                 <li class="list_Item">
-                                    <span class="date span_1_of_3"><?PHP echo $videos["date_posted"]; ?></span>
+                                    <span class="date span_1_of_3"><?PHP echo $videos["create_time"]; ?></span>
                                     <span class="blog_List_Title span_1_of_3"><?PHP echo $videos["title"]; ?></span>
                                     <span class="author span_1_of_3"><?PHP echo $videos["first_name"]." ".$videos["last_name"]." (".$videos["nickname"].")"; ?></span>
                                 </li>
@@ -162,9 +162,9 @@
                                 	{
                             ?>
                                 <li>
-                                    <span class="date span_1_of_3"><?PHP echo $images["date_created"]; ?></span>
-                                    <span class="blog_List_Title span_1_of_3"><?PHP echo $images["title"]; ?></span>
-                                    <span class="author span_1_of_3"><?PHP echo $images["first_name"]." ".$images["last_name"]." (".$images["nickname"].")"; ?></span>
+                                    <span class="date span_1_of_3"><?PHP echo $image["create_time"]; ?></span>
+                                    <span class="blog_List_Title span_1_of_3"><?PHP echo $image["title"]; ?></span>
+                                    <span class="author span_1_of_3"><?PHP echo $image["first_name"]." ".$image["last_name"]." (".$images["nickname"].")"; ?></span>
                                 </li>
                             <?PHP 
                             		}
@@ -196,7 +196,7 @@
                                 	{
                             ?>
                                 <li>
-                                    <span class="date span_1_of_3"><?PHP echo $code["date_created"]; ?></span>
+                                    <span class="date span_1_of_3"><?PHP echo $code["create_time"]; ?></span>
                                     <span class="blog_List_Title span_1_of_3"><?PHP echo $code["title"]; ?></span>
                                     <span class="author span_1_of_3"><?PHP echo $code["first_name"]." ".$code["last_name"]." (".$code["nickname"].")"; ?></span>
                                 </li>
@@ -230,7 +230,7 @@
                                 	{
                             ?>
                                 <li>
-                                    <span class="date span_1_of_3"><?PHP echo $steam["date_created"]; ?></span>
+                                    <span class="date span_1_of_3"><?PHP echo $steam["create_time"]; ?></span>
                                     <span class="blog_List_Title span_1_of_3"><?PHP echo $steam["title"]; ?></span>
                                     <span class="author span_1_of_3"><?PHP echo $steam["first_name"]." ".$steam["last_name"]." (".$steam["nickname"].")"; ?></span>
                                 </li>
